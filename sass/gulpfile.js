@@ -14,7 +14,7 @@ var gulp = require('gulp'),
     cache = require('gulp-cache'),
     livereload = require('gulp-livereload');
 
-// var sourcemaps = require('gulp-sourcemaps');
+var sourcemaps = require('gulp-sourcemaps');
 
 gulp.task('clean', function() {
     return gulp.src(['dist'], {
@@ -28,6 +28,17 @@ gulp.task('sass', function() {
         .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest('./css'));
 });
+
+// gulp.task('sass', function () {
+//   return sass('./sass/**/*.scss', {
+//       precision: 6,
+//       stopOnError: true,
+//       cacheLocation: './',
+//       loadPath: [ 'library', '../../shared-components' ]
+//     })
+//     .on('error', sass.logError)
+//     .pipe(gulp.dest('./result'));
+// });
 
 gulp.task('sass:watch', function() {
     gulp.watch('./sass/**/*.scss', ['sass']);

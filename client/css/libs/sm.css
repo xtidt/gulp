@@ -4097,7 +4097,6 @@ body.panel-closing .page {
   top: 0;
 }
 .picker-modal .bar:before {
-.picker-modal .bar:before {
   content: '';
   position: absolute;
   left: 0;

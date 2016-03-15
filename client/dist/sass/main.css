@@ -201,7 +201,8 @@ body {
   text-align: left; }
 
 .rotate90 {
-  transform: rotate(-90deg); }
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg); }
 
 .pr2 {
   padding-right: 2px; }
@@ -311,8 +312,6 @@ body {
   padding-top: 10px; }
 
 .trans1 {
-  -webkit-transition: all 1s ease-in-out;
-  -moz-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out; }
 
 body .content {
@@ -394,15 +393,12 @@ body .question {
   font-size: 18px;
   background: #fff;
   /* Center slide text vertically */
-  display: -webkit-box;
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
-  -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  -webkit-box-align: center;
   -ms-flex-align: center;
   -webkit-align-items: center;
   align-items: center;

@@ -1,6 +1,6 @@
 // 载入外挂
 var gulp = require('gulp'),  
-    sass = require('gulp-ruby-sass'),
+    sass = require('gulp-sass'),
     autoprefixer = require('gulp-autoprefixer'),
     minifycss = require('gulp-minify-css'),
     jshint = require('gulp-jshint'),
@@ -13,21 +13,28 @@ var gulp = require('gulp'),
     cache = require('gulp-cache'),
     livereload = require('gulp-livereload');
 
+//sass
+gulp.task('sass', function() {
+    gulp.src('./sass/**/*.scss')
+        .pipe(sass().on('error', sass.logError))
+        .pipe(gulp.dest('./css'));
+});
+
 // 样式
 gulp.task('styles', function() {  
-  return gulp.src('src/styles/*.scss')
-    // .pipe(sass('src/styles/*.scss').on('error', sass.logError))
+  return gulp.src('**/*.scss')
+    .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
-    .pipe(gulp.dest('dist/styles'))
+    .pipe(gulp.dest('dist/'))
     .pipe(rename({ suffix: '.min' }))
     .pipe(minifycss())
-    .pipe(gulp.dest('dist/styles'))
+    .pipe(gulp.dest('dist/'))
     .pipe(notify({ message: 'Styles task complete' }));
 });
 
 // 脚本
 gulp.task('scripts', function() {  
-  return gulp.src('src/scripts/**/*.js')
+  return gulp.src('js/**/*.js')
     // .pipe(jshint('.jshintrc'))
     .pipe(jshint.reporter('default'))
     .pipe(concat('main.js'))
@@ -40,9 +47,9 @@ gulp.task('scripts', function() {
 
 // 图片
 gulp.task('images', function() {  
-  return gulp.src('src/images/**/*')
+  return gulp.src('img/**/*')
     .pipe(cache(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true })))
-    .pipe(gulp.dest('dist/images'))
+    .pipe(gulp.dest('dist/img'))
     // .pipe(notify({ message: 'Images task complete' }));
 });
 
