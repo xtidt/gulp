@@ -1,0 +1,150 @@
+@charset "utf-8";
+
+.ad-img-list {
+  .btn-group {
+    position: absolute;
+    top: 50%; left: 0; right: 0;
+    width: 100%;
+    height: 25px;
+    margin-top: -12px;
+  }
+  .btn-prev,
+  .btn-next {
+    float: left;
+    cursor: pointer;
+    font-size: 18px;
+    &:hover {
+      color: #999;
+    }
+  }
+  .btn-next {
+    float: right;
+  }
+  ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  li {
+    float: left;
+    margin: 10px 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+  .img-outer {
+    position: relative;
+    border: 1px solid #ccc;
+
+    &:hover .del { display: block;}
+  }
+  .del {
+    position: absolute;
+    top: 5px; right: 5px;
+    cursor: pointer;
+
+    i {
+      text-align: right;
+      font-size: 20px;
+      color: #f33;
+    }
+  }
+  .img-upload {
+    display: block;
+    position: absolute;
+    bottom: 5px; right: 5px;
+    overflow: hidden;
+    padding: 5px;
+    background-color: #00CC00;
+    color: #fff;
+    border-radius: 5px;
+
+    &.disabled {
+      background: #bbb;
+    }
+  }
+}
+.ad-switch {
+  input {
+    margin-left: 5px;
+  }
+}
+.ad-link-type {
+  margin-top: 5px;
+
+  .item {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+
+    &.active {
+      background-color: #eee;
+    }
+  }
+}
+.ad-link-type .item.ad-link-type-0 {
+  border-right-width: 0;
+}
+
+.ad-type-home {
+  #ad-img-list {
+    img {
+      display: block;
+      width: (640px / 3);
+      height: (926px / 3);
+    }
+  }
+  #btn-img-add {
+    float: left;
+    width: 200px;
+    margin-top: 30px;
+  }
+}
+.ad-type-info {
+  #ad-img-list {
+    img {
+      display: block;
+      width: (640px / 2.5);
+      height: (280px / 2.5);
+    }
+  }
+  #btn-img-add {
+    float: left;
+    width: 300px;
+  }
+}
+.ad-type-home,
+.ad-type-info {
+  #btn-img-add {
+    display: block;
+    position: relative;
+    overflow: hidden;
+
+    .btn-img-icon {
+      display: block;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    i {
+      display: block;
+      position: relative;
+      overflow: hidden;
+      font-size: 90px;
+    }
+
+    img {
+      display: none;
+      margin: 0 auto;
+    }
+
+    &.loading {
+      i {
+        display: none;
+      }
+
+      img {
+        display: block;
+      }
+    }
+  }
+}

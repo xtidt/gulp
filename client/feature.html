@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>功能介绍</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <!--引入样式库-->
+    <link rel="stylesheet" href="./css/libs/sm.min.css">
+    <link rel="stylesheet" href="./css/libs/sm-extend.min.css">
+    <link rel="stylesheet" href="./vendor/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+    <div class="page-group">
+        <!--html代码 -->
+        <div class="page page-current" id="index">
+            <!-- 这里是页面内容区 -->
+            <div class="content">
+                <div class="content-padded">
+                    <p>机构端</p>
+                    <!-- Swiper -->
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="./img/a1.jpg" alt=""></div>
+                            <div class="swiper-slide"><img src="./img/a2.jpg" alt=""></div>
+                            <div class="swiper-slide"><img src="./img/a3.jpg" alt=""></div>
+                            <div class="swiper-slide"><img src="./img/a4.jpg" alt=""></div>
+                        </div>
+                    </div>
+                    <p>家长端</p>
+                    <!-- Swiper -->
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="./img/b1.jpg" alt=""></div>
+                            <div class="swiper-slide"><img src="./img/b2.jpg" alt=""></div>
+                            <div class="swiper-slide"><img src="./img/b3.jpg" alt=""></div>
+                        </div>
+                    </div>
+                </div>
+                <footer class="footer">
+                    铠迩(厦门)科技有限公司 版权所有
+                </footer>
+            </div>
+        </div>
+    </div>
+    <!--基础库引入-->
+    <script type="text/javascript" src="./js/require.config.js"></script>
+    <script type="text/javascript" src="./js/require.js"></script>
+    <script type="text/javascript" src="./js/global.js"></script>
+    <script>
+    require(['swiper','global'] , function(Swiper){
+        function start() {
+            var swiper = new Swiper('.swiper-container');
+        }
+        $.init(start());
+    })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+@charset "utf-8";
+ .form-group {
+    margin-bottom: 10px;
+}
+.form-horizontal .form-group {
+    margin-right: 0;
+    margin-left: 0;
+}
+select.form-control {
+    padding-left: 8px;
+}
+.btn .glyphicon, a .glyphicon {
+    margin-right: 5px;
+}
+.glyphicon-trash {
+    top: 2px;
+}
+.btn-link {
+    margin-right: 10px;
+}
+a:hover, a:focus {
+    cursor: pointer;
+}
+/* individual: webkit */
+
+::-webkit-input-placeholder {
+    color: #ccc;
+    letter-spacing: 1px;
+}
+/* individual: mozilla */
+
+::-moz-placeholder {
+    color: #ccc;
+    letter-spacing: 1px;
+}
+/* individual: ie */
+
+:-ms-input-placeholder {
+    color: #ccc;
+    letter-spacing: 1px;
+}
+/* individual: webkit */
+
+.grid-list::-webkit-input-placeholder {
+    font-size: 14px;
+}
+/* individual: mozilla */
+
+.grid-list::-moz-placeholder {
+    font-size: 14px;
+}
+/* individual: ie */
+
+.grid-list:-ms-input-placeholder {
+    font-size: 14px;
+}
+.html_content:not(.disabled) .my_readonly {
+    cursor: pointer!important;
+    background-color: transparent!important;
+}
+
+// 只读输入框
+.form-control[readonly] {
+    cursor: default;
+}
+

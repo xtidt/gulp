@@ -1,0 +1,157 @@
+@charset "utf-8";
+body {
+
+}
+@font-face {
+  font-family: 'video';
+  src: url('../../font/video.eot?57000427');
+  src: url('../../font/video.eot?57000427#iefix') format('embedded-opentype'),
+  url('../../font/video.woff?57000427') format('woff'),
+  url('../../font/video.ttf?57000427') format('truetype'),
+  url('../../font/video.svg?57000427#video') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.icon2-videocam:before { content: '\e800'; } /* '' */
+.icon2-play-circle2:before { content: '\e801'; } /* '' */
+.icon2-chat:before { content: '\e802'; } /* '' */
+.icon2-fire:before { content: '\e803'; } /* '' */
+.icon2-fire-station:before { content: '\e804'; } /* '' */
+.icon2-mail-alt:before { content: '\e805'; } /* '' */
+.icon2-user:before { content: '\e806'; } /* '' */
+.icon2-mail:before { content: '\e807'; } /* '' */
+.icon2-heart:before { content: '\e808'; } /* '' */
+.icon2-heart-empty:before { content: '\e809'; } /* '' */
+.icon2-star:before { content: '\e80a'; } /* '' */
+.icon2-star-empty:before { content: '\e80b'; } /* '' */
+.icon2-picture:before { content: '\e80c'; } /* '' */
+.icon2-camera:before { content: '\e80d'; } /* '' */
+.icon2-camera-alt:before { content: '\e80e'; } /* '' */
+.icon2-ok:before { content: '\e80f'; } /* '' */
+.icon2-user-plus:before { content: '\e810'; } /* '' */
+.icon2-user-times:before { content: '\e811'; } /* '' */
+.icon2-users:before { content: '\e812'; } /* '' */
+.icon2-chat-1:before { content: '\e813'; } /* '' */
+.icon2-comment:before { content: '\e814'; } /* '' */
+.icon2-picture-1:before { content: '\e815'; } /* '' */
+.icon2-camera-1:before { content: '\e816'; } /* '' */
+.icon2-email:before { content: '\e817'; } /* '' */
+.icon2-desktop:before { content: '\e818'; } /* '' */
+.icon2-right-open:before { content: '\e819'; } /* '' */
+.icon2-clock:before { content: '\e81a'; } /* '' */
+.icon2-calendar:before { content: '\e81b'; } /* '' */
+.icon2-calendar-1:before { content: '\e81c'; } /* '' */
+.icon2-layout:before { content: '\e81d'; } /* '' */
+.icon2-calendar-2:before { content: '\e81e'; } /* '' */
+.icon2-thumbs-up:before { content: '\e81f'; } /* '' */
+.icon2-thumbs-up-alt:before { content: '\e820'; } /* '' */
+.icon2-thumbs-down:before { content: '\e821'; } /* '' */
+.icon2-thumbs-down-alt:before { content: '\e822'; } /* '' */
+.icon2-th-list:before { content: '\e823'; } /* '' */
+.icon2-share:before { content: '\e824'; } /* '' */
+.icon2-trash:before { content: '\e825'; } /* '' */
+
+.icon2-star,.icon2-star-empty {
+  color:#FCCA00;
+}
+
+[class^="icon2-"]:before, [class*=" icon2-"]:before {
+  font-family: "video";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.noborder {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "微软雅黑";
+  background: #fff;
+}
+.text-right {
+  text-align: right;
+}
+
+.text-left{
+  text-align: left;
+}
+
+.rotate90{
+  transform: rotate(-90deg);
+}
+.pr2 {
+  padding-right: 2px;
+}
+
+.disappear {
+  opacity: 0;
+}
+
+//upon public
+.bar-nav {
+  background: #0894ec;
+  color:#fff;
+  a,.title {
+    color:#fff;
+  }
+}
+
+.mark {
+  position: absolute;
+  left: -2rem;
+  top: -1rem;
+}
+
+@for $i from 1 through 10 {
+  .mrr-#{$i} {
+    margin-right: $i+0rem;
+  }
+
+  .pt-#{$i} {
+  padding-top: $i+0px;
+  }
+
+  .pt-#{$i} {
+    padding-top: $i+0px;
+  }
+
+}
+
+.trans1 {
+  -webkit-transition:all 1s ease-in-out;
+  -moz-transition:all 1s ease-in-out;
+  transition:all 1s ease-in-out;
+}
+
+$color1 : #0894ec;
+
+//extend
+@import "index.scss";

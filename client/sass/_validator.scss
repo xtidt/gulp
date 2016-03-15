@@ -1,0 +1,11 @@
+.n-default .msg-wrap {
+  margin-top: 4px;
+}
+
+.n-yellow .msg-wrap {
+  margin-top: 3px;
+}
+
+input.n-invalid, textarea.n-invalid, select.n-invalid, {
+  border: 1px solid red !important;
+}

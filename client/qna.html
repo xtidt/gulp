@@ -1,0 +1,141 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>帮助与反馈</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <!--引入样式库-->
+    <link rel="stylesheet" href="./css/libs/sm.min.css">
+    <link rel="stylesheet" href="./css/libs/sm-extend.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+    <div class="page-group">
+        <!--html代码 -->
+        <div class="page page-current" id="index">
+            <!-- 这里是页面内容区 -->
+            <div class="content">
+                <div class="qna"></div>
+                <div class="question" style="display:block;">
+                    <li>
+                        <textarea name="question" id="question" cols="1" rows="1" placeholder="请输入你的疑问"></textarea>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" id="btnID" class="button button-big button-fill button-success external" external>提问</a>
+                    </li>
+                </div>
+                <div class="content-padded" id="list">
+                    <ul class="item">
+                        <h3>教育孩子为何不宜太苛刻？</h3>
+                        <li style="display:block;">
+                            有这样一批父母：对待工作，他们追求完美，获得了事业的成功；对待孩子，他们也努力给孩子最好的教育，希望孩子同样成功。尤其是当孩子进入青春期后，父母怕孩子误入歧途，对孩子要求更加严格。但是，教育孩子过分苛刻，孩子容易患强迫症。有的父母自己就是完美主义者，从怀孕时就开始注意健康饮食、胎教，让孩子上“贵族”幼儿园，进行双语教育，在家中只能说英语，不许用汉语交流。孩子的周末比平常还忙：上钢琴班、英语班、奥数班……事事都要求做到最好。生活上要求孩子循规蹈矩，如被子要叠得整齐、坐姿要端正、写字要工整、饮食要注意绝对卫生……
+                        </li>
+                    </ul>
+                    <ul class="item">
+                        <h3>怎样与孩子做有效沟通？</h3>
+                        <li>现在的孩子和家长都存在沟通上的障碍，其实家长多些耐心给孩子多些时间陪孩子，多了解下他们的心声，相信和孩子沟通是很简单的。以下是小编关于有效沟通的方法给大家搜集的，家长朋友可以了解下。
+                            <p> 1、倾听他们怎么说，而且须用心地倾听。</p>
+                            <p> 2、花时间学会真正理解他们的一言一行、一举一动。</p>
+                            <p> 3、就像我们当父母的一样，孩子当然也不是完美的，故不妨接纳他们本来的样子吧!</p>
+                            <p> 4、常和他们一起度过有意义的时光。</p>
+                            <p> 5、别将孩子跟他们的兄弟姐妹刻意地作“横向比较”。</p>
+                            <p> 6、与其对孩子常作否定，还不如找到一些表示肯定的话说说。</p>
+                            <p> 7、不忘表扬——告诉他们你为他们而感到自豪。</p>
+                        </li>
+                    </ul>
+                    <ul class="item">
+                        <h3>找家教的有哪些误区？</h3>
+                        <li>
+                            有些老师家教费用高确实是水平高，时间被学生占满了。但很多高收费的家教是被某些不良机构抬起来的。特别是一些所谓“知名”的机构。他们花大钱做广告，租豪华写字楼，对普通的教学进行概念炒作，忽悠家长。所以家长在找家教的时候一定要多比较，看清楚家教费用到底是“高”在哪里?是“高”在老师的教学水平上，还是“高”在了广告费和写字楼租金里。
+                        </li>
+                    </ul>
+                    <ul class="item">
+                        <h3>如何找到合适的家教？ </h3>
+                        <li>
+                            请家教是一件很有讲究的事情，比保姆要复杂的多。因为家教老师的人格、教学水平关系到孩子的成长和未来。一个优秀的家教老师，不但对孩子在学习上有很大的帮助，而且对孩子的良好人格、习惯养成都有较大的影响;反之，如果家教请的不好，不但花了不少代价，且白白耽误孩子的时间。…
+                        </li>
+                    </ul>
+                </div>
+                <footer class="footer">
+                    铠迩(厦门)科技有限公司 版权所有
+                </footer>
+            </div>
+        </div>
+    </div>
+    <!--基础库引入-->
+    <script type="text/javascript" src="./js/require.config.js"></script>
+    <script type="text/javascript" src="./js/require.js"></script>
+    <script type="text/javascript" src="./js/global.js"></script>
+    <script>
+    require(['global'], function() {
+        function requestHandle() {
+            var apiUrl = 'http://api.zzzcare.com/wutuopon/';
+            //todo testApi
+            // var apiUrl = '';
+            var phone = $.GetQueryString('phone');
+
+            $('#btnID').on('click', function() {
+                if (!$.GetQueryString('phone')) {
+                    $.toast('无身份信息');
+                    return false;
+                }
+
+                if ($.trim($('#question').val()) == '') {
+                    $.toast('请输入问题');
+                    return false;
+                }
+
+                var postData = {
+                    "content": $.trim($('#question').val())
+                };
+
+                postData = JSON.stringify(postData);
+
+                $.ajax({
+                    url: apiUrl + 'feedback/add?phone='+phone,
+                    contentType: 'application/json;charset=UTF-8',
+                    data: postData,
+                    dataType:'JSON',
+                    type: 'POST',
+                    beforeSend: function(xhr) {
+                        xhr.setRequestHeader("site", "org");
+                    },
+                    success: function(data) {
+                        $.toast('提交成功');
+                        $('#btnID').addClass('disabled').off('click');
+                        $('#question').val('');
+                    },
+                    error: function(xhr) {
+                        $.toast('请求出错');
+                    }
+                })
+
+            });
+        }
+
+        function start() {
+            var register = function() {
+                $('#list h3').each(function(index) {
+                    $(this).on('click', function() {
+                        $('.item h3').not(index).next('li').hide();
+                        $('.item h3').eq(index).next('li').show();
+                    })
+                });
+            };
+
+            register();
+            requestHandle();
+        }
+
+        $.init(start());
+    })
+    </script>
+</body>
+
+</html>

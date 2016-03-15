@@ -1,0 +1,133 @@
+
+.header-right {
+	margin: 0 14px 0 0;
+	padding: 0;
+	height: 40px;
+	width: 110px;
+	text-align: center;
+	line-height: 40px;
+}
+
+.desk-panel {
+	position: relative;
+	padding-right: 110px;
+	width: 100%;
+	height: 240px;
+	overflow: hidden;
+}
+
+.favor-panel {
+	height: 100%;
+	border-right: 1px dashed #ddd;
+	padding-right: 10px;
+	.favor-item {
+		width: 80px;
+		height: 80px;
+		text-align: center;
+		float: left;
+		overflow: hidden;
+		.favor-icon {
+			position: relative;
+			width: 50px;
+			height: 50px;
+			line-height: 50px;
+			font-size: 30px;
+			background-color: #eee;
+			display: block;
+			margin: auto;
+			.favor-del {
+				display: none;
+			}
+			&:hover {
+				.favor-del {
+					position: absolute;
+					top: 0;
+					right: 0;
+					background: red;
+					color: #fff;
+					display: block;
+					margin-right: 0;
+					font-size: 14px;
+				}
+			}
+		}
+		.favor-name {
+			height: 30px;
+			line-height: 30px;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+		}
+	}
+	.favor-add {
+		margin: 0 15px;
+		width: 50px;
+		height: 50px;
+		line-height: 50px;
+		text-align: center;
+		font-size: 50px;
+		float: left;
+	}
+}
+
+.history-panel {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 110px;
+	height: 100%;
+	overflow: hidden;
+	.history-item {
+		height: 40px;
+		line-height: 40px;
+		text-align: left;
+		display: inline-block;
+		width: 100%;
+      	padding-left: 10px;
+      	position: relative;
+      	.history-name {
+      		display: inline-block;
+      		height: 40px;
+      		line-height: 40px;
+      		max-width: 82px;
+      		vertical-align: middle;
+      	}
+      	.history-add {
+      		display: none;
+      	}
+      	&:hover {
+	      	.history-add {
+	      		vertical-align: middle;
+	      		display: inline-block;
+	      		font-size: 14px;
+				margin-right: 0;
+				margin-left: 3px;
+	      	}
+      	}
+	}
+}
+
+.announcement-panel {
+	height: 240px;
+	width: 100%;
+	overflow: hidden;
+}
+
+.announcement-item {
+	height: 40px;
+	line-height: 40px;
+	margin: 0 20px;
+	border-bottom: 1px solid #ddd;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	cursor: pointer;
+}
+
+/* for desk icon */
+
+@each $i in 'staff-document-list', 'staff-position-list', 'staff-account-list', 'staff-ability-list', 'staff-post-list', 'staff-postPosition', 'staff-postChange', 'course-document-list', 'course-type-list', 'course-exam-list', 'course-train-list', 'course-ware-list', 'exercise-document-list', 'exercise-type-list', 'exercise-bank-list', 'exercise-paper-list', 'data-project-form', 'data-organization-form', 'data-department-form', 'data-company-form', 'data-reward-list', 'data-evaluation-list', 'train-positionCourse-list', 'train-postCourse-list', 'train-plan-list', 'question-list', 'question-sensitive', 'welfare-lottery-list', 'welfare-lottery-bill', 'welfare-incident-list', 'welfare-signin-list', 'welfare-birthdayrecord-list', 'welfare-rankcontrast-list', 'permission-role-list', 'announcement-list', 'announcement-type-list', 'report-course-learnList', 'report-staff-learnList', 'report-staff-loginAnalysis', 'report-staff-loginDuration', 'report-staff-loginList', 'report-staff-recordList', 'report-staff-recordStatistics', 'staff-postType-list', 'train-courseFavors-list', 'train-learningReminder-list', 'train-staffLearningReminder-list', 'data-type-list', 'feedback-user-list', 'ad-form', 'permission-setting' {
+	.#{$i} {
+		background: url('../img/#{$i}.png') no-repeat 0 0;
+	}
+}

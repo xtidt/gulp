@@ -1,0 +1,16 @@
+.ex-answer-type {
+  display: none;
+
+  &.active {
+    display: block;
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+  }
+}
+.btn-import {
+  display: inline-block;
+  vertical-align: middle;
+}

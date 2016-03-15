@@ -1,0 +1,493 @@
+@charset "utf-8";
+/* 其他人编写处
+---------------------------------------------------------------------------------------------- */
+/* 公共
+---------------------------------------------------------------------------------------------- */
+
+.ui-icon {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-indent: 0;
+}
+.ui-grid-ico-sort {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+/* 手状 */
+
+.ui-jqgrid a {
+    cursor: pointer;
+}
+/* 表格横向滚动条 */
+
+.ui-jqgrid table {
+    border-collapse: separate;
+}
+/* 圆角 */
+
+.ui-corner-all, .ui-corner-top, .ui-corner-bottom, .ui-corner-left, .ui-corner-right, .ui-corner-tr {
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    -o-border-radius: 0;
+    -ms-border-radius: 0;
+    border-radius: 0;
+}
+/* 默认样式 */
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+    background: none;
+    color: #666;
+    -moz-box-shadow: 0px 0px 0px 1px #ddd !important;
+    -webkit-box-shadow: 0px 0px 0px 1px #ddd !important;
+    -o-box-shadow: 0px 0px 0px 1px #ddd !important;
+    -ms-box-shadow: 0px 0px 0px 1px #ddd !important;
+    box-shadow: 0px 0px 0px 1px #ddd !important;
+    background-color: #fff;
+    border: 0;
+}
+/* 最外层 */
+
+.ui-jqgrid {
+    background: none;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    -o-box-sizing: content-box;
+    -ms-box-sizing: content-box;
+    box-sizing: content-box;
+    -moz-box-shadow: 0px 0px 0px 1px #ddd !important;
+    -webkit-box-shadow: 0px 0px 0px 1px #ddd !important;
+    -o-box-shadow: 0px 0px 0px 1px #ddd !important;
+    -ms-box-shadow: 0px 0px 0px 1px #ddd !important;
+    box-shadow: 0px 0px 0px 1px #ddd !important;
+    background-color: #fff;
+    border: 0;
+}
+/* 表头+表内容 */
+
+.ui-jqgrid .ui-jqgrid-view {
+    font-size: 14px;
+}
+/* 工具栏 上+下 */
+
+.ui-jqgrid .ui-userdata a[data-action], #grid-pager_left a[data-action] {
+    margin-right: 10px;
+    color: #333;
+}
+/* header
+---------------------------------------------------------------------------------------------- */
+/* 单元格 */
+
+.ui-jqgrid .ui-jqgrid-htable th {
+    padding: 8px 4px;
+    -moz-box-shadow: 0px 0px 0px 1px #ddd !important;
+    -webkit-box-shadow: 0px 0px 0px 1px #ddd !important;
+    -o-box-shadow: 0px 0px 0px 1px #ddd !important;
+    -ms-box-shadow: 0px 0px 0px 1px #ddd !important;
+    box-shadow: 0px 0px 0px 1px #ddd !important;
+    background-color: #f0f0f0;
+    border: 0;
+}
+.ui-jqgrid .ui-jqgrid-htable th.ui-state-hover {
+    background-color: #eff4f7;
+    opacity: 1;
+}
+/* 单元格 */
+
+.ui-jqgrid .ui-jqgrid-htable th div {
+    line-height: 24px;
+    height: 24px;
+}
+/* 表头滚动条部分 */
+
+.ui-jqgrid .ui-jqgrid-hbox {
+    background-color: #f0f0f0;
+}
+/* 标题 */
+
+.ui-jqgrid .ui-jqgrid-titlebar {
+    color: #666!important;
+    letter-spacing: 1px;
+    font-size: 16px;
+    border-bottom: 1px solid #ddd !important;
+    height: 42px;
+    padding: 8px;
+    padding-left: 12px;
+    line-height: 24px;
+    background: #E0ECFF;
+    background: -webkit-linear-gradient(top, #EFF5FF 0, #E0ECFF 100%);
+    background: -moz-linear-gradient(top, #EFF5FF 0, #E0ECFF 100%);
+    background: -o-linear-gradient(top, #EFF5FF 0, #E0ECFF 100%);
+    background: linear-gradient(to bottom, #EFF5FF 0, #E0ECFF 100%);
+    background-repeat: repeat-x;
+    /* filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#EFF5FF, endColorstr=#E0ECFF, GradientType=0);
+ */
+}
+/* 标题 */
+
+.ui-jqgrid .ui-jqgrid-titlebar:before {
+    position: relative;
+    top: 2px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-indent: 0;
+    background-image: none;
+    content: "\e011";
+    margin-right: 6px;
+}
+/* 标题按钮伸展 */
+
+.ui-jqgrid .ui-jqgrid-titlebar-close {
+    margin-right: 10px;
+}
+/* 标题按钮伸展 */
+
+.ui-jqgrid-titlebar-close.HeaderButton {
+    color: #666;
+    border: 0px;
+    padding: 1px;
+}
+/* 标题按钮伸展 */
+
+.ui-jqgrid-titlebar-close.HeaderButton.ui-state-hover {
+    color: #444;
+    border: 0px;
+    padding: 1px;
+}
+/* 标题按钮伸展 */
+
+.ui-jqgrid-titlebar-close.HeaderButton .ui-icon {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-indent: 0;
+    background-image: none;
+}
+/* 收缩 */
+
+.ui-icon.ui-icon-circle-triangle-n:before {
+    content: "\e113";
+}
+/* 展开 */
+
+.ui-icon.ui-icon-circle-triangle-s:before {
+    content: "\e114";
+}
+/* 工具栏 */
+
+.ui-jqgrid .ui-userdata {
+    line-height: 39px;
+    height: 41px;
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+    background: #f1f1f1;
+    font-weight: normal;
+    padding-left: 12px;
+}
+/* 排序 */
+
+.ui-jqgrid .ui-icon-asc {
+    margin-left: 3px;
+    margin-top: 5px;
+    height: 14px;
+}
+.ui-icon-asc:before {
+    content: "\f0de";
+}
+.ui-jqgrid .ui-icon-desc {
+    margin-top: 4px;
+    margin-left: 3px;
+    height: 14px;
+}
+.ui-icon-desc:before {
+    content: "\f0dd";
+}
+.s-ico .ui-icon {
+    background-image: none;
+}
+/* body
+---------------------------------------------------------------------------------------------- */
+/* 单元格 */
+
+.ui-jqgrid tr.jqgrow td {
+    padding: 8px 4px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    -moz-box-shadow: 0px 0px 0px 1px #ddd !important;
+    -webkit-box-shadow: 0px 0px 0px 1px #ddd !important;
+    -o-box-shadow: 0px 0px 0px 1px #ddd !important;
+    -ms-box-shadow: 0px 0px 0px 1px #ddd !important;
+    box-shadow: 0px 0px 0px 1px #ddd !important;
+    background-color: #fff;
+    border: 0;
+    /* filter: "progid:DXImageTransform.Microsoft.Shadow(color=#ddd,direction=0,strength=5)
+    progid:DXImageTransform.Microsoft.Shadow(color=#ddd,direction=90,strength=5)
+    progid:DXImageTransform.Microsoft.Shadow(color=#ddd,direction=180,strength=5)
+    progid:DXImageTransform.Microsoft.Shadow(color=#ddd,direction=270,strength=5)"; */
+}
+/* 内容 */
+
+.ui-jqgrid .ui-jqgrid-bdiv {
+    -moz-box-shadow: 0px 0px 0px 1px #ddd !important;
+    -webkit-box-shadow: 0px 0px 0px 1px #ddd !important;
+    -o-box-shadow: 0px 0px 0px 1px #ddd !important;
+    -ms-box-shadow: 0px 0px 0px 1px #ddd !important;
+    box-shadow: 0px 0px 0px 1px #ddd !important;
+    background-color: #fff;
+    border: 0;
+}
+/* 偶数行 */
+
+.ui-priority-secondary, .ui-widget-content .ui-priority-secondary, .ui-widget-header .ui-priority-secondary {
+    opacity: 1;
+}
+.ui-jqgrid tr.jqgrow.ui-priority-secondary td {
+    background: none !important;
+    background-color: #f9f9f9 !important;
+}
+/* 行经过 */
+
+.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover {
+    opacity: 1;
+}
+.ui-jqgrid tr.jqgrow.ui-state-hover td {
+    background: none !important;
+    background-color: #eff4f7 !important;
+}
+/* 行高亮 */
+
+.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight {
+    opacity: 1;
+}
+.ui-jqgrid tr.jqgrow.ui-state-highlight td {
+    background: none !important;
+    background-color: #e4efc9 !important;
+}
+/* pager
+---------------------------------------------------------------------------------------------- */
+/* 页脚div */
+
+.ui-jqgrid .ui-jqgrid-pager {
+    height: 40px;
+    padding: 8px !important;
+    border-radius: 0;
+    font-size: 14px;
+    /* margin-top: -1px !important; */
+    background: #f1f1f1;
+}
+/* 翻页 */
+
+.ui-jqgrid .ui-pg-input {
+    height: 19px;
+    line-height: 14px;
+    font-size: 12px;
+    width: 55px;
+}
+/* 切换页 */
+
+.ui-jqgrid .ui-pg-selbox {
+    font-size: 12px;
+    line-height: 20px;
+    height: 20px;
+}
+/* 导航按钮 */
+
+.ui-jqgrid .ui-icon.glyphicon {
+    text-indent: 0;
+    background-image: none;
+    font-size: 14px;
+}
+/* 导航按钮 经过 */
+
+.ui-jqgrid .ui-pg-button.ui-corner-all.ui-state-hover {
+    border: 0;
+    padding: 1px;
+}
+/* 导航按钮 图标 经过 */
+
+.ui-jqgrid .ui-pg-button.ui-corner-all.ui-state-hover .ui-icon.glyphicon:hover {
+    /* font-size: 16px;
+    padding:1px; */
+}
+/* 导航按钮 */
+
+.ui-jqgrid .ui-jqgrid-pager .ui-pg-div {
+    margin-right: 5px;
+    line-height: 16px;
+    color: #333;
+}
+/* 总记录数 */
+
+.ui-jqgrid .ui-paging-info {
+    margin-top: 0px;
+}
+.ui-icon.ui-icon-seek-first:before {
+    content: "\e070";
+}
+.ui-icon.ui-icon-seek-prev:before {
+    content: "\e071";
+}
+.ui-icon.ui-icon-seek-next:before {
+    content: "\e075";
+}
+.ui-icon.ui-icon-seek-end:before {
+    content: "\e076";
+}
+/* 弹出编辑
+---------------------------------------------------------------------------------------------- */
+
+.ui-jqdialog-content .CaptionTD {
+    text-align: right;
+    padding-right: 10px;
+    width: 150px;
+}
+.ui-jqdialog-content .FormData>td {
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+.ui-jqdialog-content .FormData {
+    border-bottom: 1px dotted #e8e8e8;
+}
+.ui-jqdialog-content input.FormElement, .ui-jqdialog-content textarea.FormElement {
+    padding: 6px 12px;
+}
+.ui-jqdialog-content select.FormElement {
+    padding-left: 8px;
+}
+#nData, #pData {
+    padding: 5px;
+    width: 75px;
+}
+/* 行内编辑
+---------------------------------------------------------------------------------------------- */
+
+.ui-jqgrid .ui-jqgrid-view input[type="text"], .ui-jqgrid .ui-jqgrid-view select, .ui-jqgrid .ui-jqgrid-view textarea {
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    height: 34px;
+    font-size: 14px !important;
+}
+.ui-jqgrid .ui-jqgrid-view textarea {
+    margin-bottom: -5px;
+}
+.ui-jqgrid tr.jqgrow[editable="1"] td {
+    overflow: visible;
+    padding: 3px;
+}
+/* 弹出查询
+---------------------------------------------------------------------------------------------- */
+
+.columns select, .operators select, select.opsel {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+.columns select {
+    width: 150px;
+    margin-right: 10px;
+}
+.operators select {
+    width: 100px;
+    margin-right: 10px;
+}
+select.opsel {
+    width: 100px;
+    display: inline-block;
+    margin-right: 10px;
+}
+.data input, .data select, .data span.input-icon {
+    height: 34px;
+    width: 150px !important;
+    margin-right: 10px;
+    margin-top: 0px;
+}
+.searchFilter table.group {
+    border-collapse: separate;
+    border-spacing: 4px;
+}
+/* 从表编辑
+---------------------------------------------------------------------------------------------- */
+
+.ui-jqgrid[data-status="view"] td {
+    color: #aaa !important;
+    cursor: default;
+}
+.ui-jqgrid[data-status="view"] [data-action] {
+    color: #aaa !important;
+    cursor: default;
+}
+.ui-jqgrid[data-status="view"] th, .ui-jqgrid[data-status="view"] span {
+    color: #aaa !important;
+    cursor: default;
+}
+.ui-jqgrid[data-status="update"] td span.editable .glyphicon {
+    display: none;
+}
+.ui-jqgrid[data-status="update"] td span.editable:hover .glyphicon,.ui-jqgrid[data-status="update"] td.active span.editable .glyphicon {
+    display: inline-block;
+}
+.ui-jqgrid[data-status="update"] tr.delete input, .ui-jqgrid[data-status="update"] tr.delete select, .ui-jqgrid[data-status="update"] tr.delete textarea {
+    text-decoration: line-through;
+}
+.ui-jqgrid[data-status="update"] td .msg-box {
+    display: none;
+}
+.ui-jqgrid[data-status="update"] td:hover .msg-box {
+    display: inline-block;
+}
+.ui-jqgrid[data-status="update"] .form-control {
+    border: 0;
+    box-shadow: none;
+}
+.ui-jqgrid[data-status="update"] .form-control:hover,.ui-jqgrid[data-status="update"] td.active .form-control {
+    border: 1px solid #999;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    transition: none;
+}
+.ui-jqgrid[data-status="update"] .form-control[disabled],.ui-jqgrid[data-status="update"] .form-control[readonly] {
+    background-color: transparent;
+    color: #aaa;
+}
+.ui-jqgrid[data-status="update"] [data-control="ref"] .form-control[readonly] {
+    color: #555;
+}
+.ui-jqgrid[data-status="update"] tr.jqgrow[editable="1"] td {
+    padding: 1px;
+}

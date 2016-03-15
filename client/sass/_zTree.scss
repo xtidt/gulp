@@ -1,0 +1,28 @@
+.ztree {
+  box-sizing: content-box !important;
+  * { box-sizing: content-box !important; }
+
+  min-height: 200px !important;
+  max-height: 544px !important;
+  overflow-y: auto !important;
+  overflow-x: auto !important;
+  height: 544px\9 !important;
+
+  li span.button.add {
+    margin-left: 2px;
+    margin-right: -1px;
+    background-position: -144px 0;
+    vertical-align: top;
+  }
+}
+
+.tree-search {
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
+  border-top: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  padding: 5px;
+  i {
+    margin-top: -1px;
+  }
+}

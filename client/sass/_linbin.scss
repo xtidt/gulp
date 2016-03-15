@@ -1,0 +1,370 @@
+@charset "utf-8";
+.toolbar {
+    margin-bottom: 6px;
+}
+.search {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: -30px;
+}
+.search-control {
+    display: inline-block;
+}
+.form-group {
+    margin-bottom: 10px;
+}
+.btn .glyphicon {
+    margin-right: 5px;
+}
+.widget-toolbar {
+    cursor: pointer;
+}
+/* 表格 新
+---------------------------------------------------------------------------------------------- */
+
+.tr-update {
+    color: blue !important;
+}
+.tr-insert {
+    color: green !important;
+}
+.tr-delete {
+    color: red !important;
+    text-decoration: line-through;
+}
+td a[data-action] {
+    font-size: 14px;
+}
+td a[data-action="cancel"] {
+    text-decoration: none;
+    display: inline-block;
+}
+/* tr 不可用 */
+
+tr.disabled, tr.disabled td a[data-action] {
+    color: #ccc !important;
+}
+/* 查看状态 tr */
+
+.html_content.disabled tr.jqgrow {
+    color: #888;
+}
+/* 查看状态 nav */
+
+.html_content.disabled .ui-jqgrid .ui-jqgrid-pager .ui-pg-div, .html_content.disabled .ui-jqgrid .ui-jqgrid-pager .ui-pg-div:hover {
+    color: #ccc !important;
+    cursor: default;
+}
+/* 查看状态 opreate */
+
+.html_content.disabled td a[data-action] {
+    color: #ccc !important;
+    cursor: default;
+}
+/* 表格  将被废弃-----------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------- */
+
+.row-update {
+    color: blue !important;
+}
+.row-insert {
+    color: green !important;
+}
+.row-delete {
+    color: red !important;
+    text-decoration: line-through;
+}
+.op_update, .op_delete, .op_save, .op_cancel, .op_audit, .op_upload {
+    cursor: pointer;
+    color: #2e6e9e !important;
+    i {
+        font-size: 14px;
+    }
+}
+.op_cancel {
+    text-decoration: none;
+    display: inline-block;
+}
+/* 表格不可编辑 - 修改, 删除 */
+
+.html_content.disabled .op_update, .html_content.disabled .op_delete {
+    color: #ccc !important;
+    cursor: default;
+}
+/* 表格不可编辑 - 内容 */
+
+.html_content.disabled .ui-widget-content {
+    color: #888;
+}
+.ui-jqgrid tr.disabled, .ui-jqgrid tr.disabled .op_update, .ui-jqgrid tr.disabled .op_delete {
+    color: #ccc !important;
+}
+th span.require {
+    color: red;
+}
+/* 表单
+---------------------------------------------------------------------------------------------- */
+
+.input-icon {
+    position: relative;
+}
+span.input-icon {
+    /*display: inline-block;*/
+    
+    display: block;
+}
+.input-icon > input {
+    padding-left: 24px;
+    padding-right: 6px;
+}
+.input-icon.input-icon-right > input {
+    padding-left: 12px;
+    padding-right: 24px;
+}
+.input-icon >[class*="icon-"] {
+    padding: 0 3px;
+    z-index: 2;
+    position: absolute;
+    top: 4px;
+    bottom: 1px;
+    left: 3px;
+    line-height: 28px;
+    display: inline-block;
+    color: #555;
+    font-size: 16px;
+}
+.input-icon.input-icon-right >[class*="icon-"] {
+    left: auto;
+    right: 3px;
+}
+.input-icon > input:focus +[class*="icon-"] {
+    color: #579;
+}
+.input-icon ~ .help-inline {
+    padding-left: 8px;
+}
+/* 参照
+---------------------------------------------------------------------------------------------- */
+/*span[data-control="ref"] input {
+    display: none;
+}
+span[data-control="ref"] input:first-child {
+    display: block;
+    width: 100%;
+}*/
+
+textarea {
+    resize: none;
+}
+/* 颜色
+---------------------------------------------------------------------------------------------- */
+
+.purple {
+    color: #a069c3!important;
+}
+.blue {
+    color: #478fca!important;
+}
+.grey {
+    color: #777!important;
+}
+.red {
+    color: #dd5a43!important;
+}
+.orange {
+    color: #ff892a!important;
+}
+.green {
+    color: #69aa46!important;
+}
+.color-info {
+    color: #269abc !important;
+}
+.color-disabled {
+    /* 最后 */
+    
+    color: #ccc !important;
+}
+/* 滚动固定
+---------------------------------------------------------------------------------------------- */
+
+.scroll-fixed {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    /*必需要,否则会自适应宽度*/
+    
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 50;
+    padding: 5px;
+}
+.scroll-unfixed {
+    padding-left: 0px;
+}
+/* 说明
+---------------------------------------------------------------------------------------------- */
+
+.help-inline {
+    position: absolute;
+    right: 0px;
+    top: 8px;
+    color: red;
+}
+/* 说明
+---------------------------------------------------------------------------------------------- */
+
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus {
+    color: #576373;
+    border-color: #c5d0dc;
+    border-top: 2px solid #4c8fbd;
+    border-bottom-color: transparent;
+    background-color: #FFF;
+    z-index: 12;
+    line-height: 16px;
+    margin-top: -1px;
+    box-shadow: 0 -2px 3px 0 rgba(0, 0, 0, 0.15);
+}
+.nav-tabs>li>a {
+    padding: 8px 12px;
+}
+.color-gray {
+    background-color: #eee;
+}
+/*福利图片上传*/
+
+.h5uploadStyle1 {
+    padding: 20px 10px;
+    height: 170px;
+    margin: 0 auto;
+    width: 350px;
+}
+/* 表格操作列
+---------------------------------------------------------------------------------------------- */
+
+.ui-row-ltr a {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+/*表格新增icon操作
+  ---------------------------------------------------------------------------------------------*/
+
+#floatImgContainer {
+    width: 157px;
+    height: 157px;
+    position: absolute;
+    left: 0px;
+    top: 0;
+    display: none;
+    background: #fff;
+    border: #eee solid 1px;
+    overflow: hidden;
+}
+#floatImgContainer img {
+    width: 157px;
+    height: 157px;
+}
+/* 两端对齐
+  ---------------------------------------------------------------------------------------------*/
+
+.text_justify {
+    text-align: justify !important;
+    text-justify: distribute-all-lines !important;
+    /*ie6-8*/
+    
+    text-align-last: justify !important;
+    /* ie9*/
+    
+    -moz-text-align-last: justify !important;
+    /*ff*/
+    
+    -webkit-text-align-last: justify !important;
+    /*chrome 20+*/
+}
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+    /* chrome*/
+    
+    .text_justify:after {
+        content: ".";
+        display: inline-block;
+        width: 100%;
+        overflow: hidden;
+        height: 0;
+    }
+}
+/* 选择对象
+  ---------------------------------------------------------------------------------------------*/
+
+.object {
+    border: 1px solid #ccc;
+    min-height: 40px;
+    padding: 5px;
+    line-height: 28px;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+}
+.object .item {
+    display: inline-block;
+    border: 1px solid transparent;
+    padding: 3px;
+    border-radius: 4px;
+    padding-left: 6px;
+    line-height: 20px;
+}
+.object .item:hover, .object .item.active {
+    border: 1px solid #ccc;
+    margin: 2px;
+}
+.object .item .glyphicon {
+    cursor: pointer;
+    color: red;
+    top: 2px;
+    visibility: hidden;
+}
+.object .item:hover .glyphicon {
+    visibility: visible;
+}
+.html_content.disabled .object .item .glyphicon {
+    cursor: default;
+    color: #ccc;
+    visibility: hidden;
+}
+/* ref 弹出 (特殊)
+  ---------------------------------------------------------------------------------------------*/
+
+.pop-title {
+    height: 30px;
+    line-height: 30px;
+}
+.dialog-box {
+    margin-bottom: 10px;
+    min-height: 100px;
+    background-color: #f1f1f1;
+    word-break: break-all;
+}
+#relpy {
+    height: 100px;
+    font-size: 14px;
+}
+.text-ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+#passwordPlaceholder {
+    position: absolute;
+    margin: 16px 0px 0px 10px;
+    background: url(../img/passwordPlaceholderImg.png) no-repeat;
+    width: 18px;
+    height: 4px;
+}
+.ui-autocomplete-loading {
+    background: white url("../img/ui-anim_basic_16x16.gif") 12px center no-repeat;
+}
+/* 自动补全, 下拉经过
+  ---------------------------------------------------------------------------------------------*/
+
+.ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus {
+    font-weight: normal;
+}

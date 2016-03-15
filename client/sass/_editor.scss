@@ -1,0 +1,92 @@
+@charset "utf-8";
+
+// content style
+.editor {
+    border: 1px solid #ddd;
+}
+// toolbar style
+.editor-toolbar {
+    padding: 10px;
+    margin-left: 0;
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #ddd;
+
+    .dropdown-menu.active {
+        display: block;
+    }
+
+    .font-color {
+
+        .btn:after {
+            display: block;
+            position: absolute;
+            top: 26px;
+            left: 50%;
+            width: 14px;
+            height: 4px;
+            margin: -3px 0 0 -13px;
+            background: #cccccc;
+            content: '';
+        }
+
+        .fa:before, .caret {
+            margin-top: -2px
+        }
+        ul {
+            box-sizing: content-box;
+            width: 80px;
+            min-width: 0;
+            padding: 10px 6px 6px 10px;
+
+            li {
+                float: left;
+                margin: 0 4px 4px 0;
+            }
+
+            a {
+                padding: 0;
+            }
+
+            div {
+                display: block;
+                width: 16px;
+                height: 16px;
+
+                &:hover {
+                    opacity: 0.8;
+                }
+            }
+        }
+        .bgc-E33737 { background-color: #E33737;}
+        .bgc-e28b41 { background-color: #e28b41;}
+        .bgc-c8a732 { background-color: #c8a732;}
+        .bgc-209361 { background-color: #209361;}
+        .bgc-418caf { background-color: #418caf;}
+        .bgc-aa8773 { background-color: #aa8773;}
+        .bgc-999999 { background-color: #999999;}
+        .bgc-333333 { background-color: #333333;}
+    }
+}
+// content style
+.editor-content {
+    overflow: auto;
+    min-height: 240px;
+    //max-height: 800px;
+    padding: 10px;
+    background-color: #fff;
+
+    &:focus {
+        outline-color: transparent;
+    }
+
+    .img-loading {
+        display: inline-block;
+        width: 35px;
+        height: 35px;
+        background: url(../img/loading_35x35.gif);
+        border: 1px solid #ddd;
+    }
+    img {
+        max-width: 100%;
+    }
+}
