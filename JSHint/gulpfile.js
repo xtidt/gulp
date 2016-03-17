@@ -25,7 +25,7 @@ gulp.task('clean', function() {
 
 gulp.task('scripts', function() {
     return gulp.src('js/**/*.js')
-        // .pipe(jshint('.jshintrc'))
+        .pipe(jshint())
         .pipe(jshint.reporter('default'))
         .pipe(concat('main.js'))
         .pipe(gulp.dest('dist/assets/js'))
@@ -38,3 +38,7 @@ gulp.task('scripts', function() {
             message: 'Scripts task complete'
         }));
 });
+
+gulp.task('default' , ['clean'],function(){
+    gulp.start('scripts');
+})

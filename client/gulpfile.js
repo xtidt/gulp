@@ -35,7 +35,7 @@ gulp.task('styles', function() {
 // 脚本
 gulp.task('scripts', function() {  
   return gulp.src('js/**/*.js')
-    // .pipe(jshint('.jshintrc'))
+    .pipe(jshint())
     .pipe(jshint.reporter('default'))
     .pipe(concat('main.js'))
     .pipe(gulp.dest('dist/scripts'))
